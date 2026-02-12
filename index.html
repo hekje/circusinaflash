@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circus in a Flash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #e74c3c;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #c0392b;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f39c12, #e74c3c);
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.3rem;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            object-fit: cover;
+        }
+
+        .content {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .content h2 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 1rem auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>🎪 Circus in a Flash</h1>
+        <p>Fun, Entertainment & Workshops</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content">
+            <h2>Welcome!</h2>
+            <p>
+                This is the new Circus in a Flash website. We're currently rebuilding 
+                to bring you an even better experience. Stay tuned for updates!
+            </p>
+            <p>
+                Circus in a Flash provides entertainment and workshops for events, 
+                bringing joy and excitement to audiences of all ages.
+            </p>
+        </div>
+
+        <!-- Placeholder Image (replace with actual circus image) -->
+        <img 
+            src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?w=800&h=400&fit=crop" 
+            alt="Circus Performance" 
+            class="hero-image"
+        >
+
+        <div class="content">
+            <h2>Coming Soon</h2>
+            <p>
+                We're working on bringing you information about our workshops, 
+                performances, and how to book us for your next event.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Circus in a Flash. All rights reserved.</p>
+    </footer>
+</body>
+</html>
