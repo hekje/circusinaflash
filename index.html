@@ -53,13 +53,13 @@
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: clamp(1.5rem, 5vw, 3rem);
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         header p {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
         }
 
         /* Main Content */
@@ -224,6 +224,23 @@
             .team-member {
                 flex: 0 0 calc(33.333% - 1rem);
                 min-width: 120px;
+            }
+            
+            nav ul {
+                gap: 0.5rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .content p {
+                font-size: 1rem;
             }
         }
 
