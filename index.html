@@ -71,13 +71,12 @@
 
         .hero-image {
             width: 100%;
-            max-width: 800px;
-            height: 400px;
+            max-width: 600px;
+            height: auto;
             margin: 2rem auto;
             display: block;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            object-fit: cover;
         }
 
         .content {
@@ -98,6 +97,136 @@
             margin: 0 auto 1rem auto;
         }
 
+        .content .tagline {
+            font-size: 1.5rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .content .notice {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        /* Team Members Section */
+        .team-section {
+            margin: 3rem 0;
+        }
+
+        .team-section h2 {
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .team-section .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .team-carousel {
+            position: relative;
+            overflow: hidden;
+            padding: 0 50px;
+        }
+
+        .team-scroll {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            padding: 1rem 0;
+        }
+
+        .team-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .team-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .team-scroll::-webkit-scrollbar-thumb {
+            background: #e74c3c;
+            border-radius: 10px;
+        }
+
+        .team-member {
+            flex: 0 0 calc(16.666% - 1rem);
+            min-width: 150px;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member .name {
+            font-weight: bold;
+            margin-top: 0.5rem;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .team-member .role {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(231, 76, 60, 0.8);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        .scroll-btn:hover {
+            background-color: rgba(192, 57, 43, 0.9);
+        }
+
+        .scroll-btn-left {
+            left: 5px;
+        }
+
+        .scroll-btn-right {
+            right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .team-member {
+                flex: 0 0 calc(33.333% - 1rem);
+                min-width: 120px;
+            }
+        }
+
         /* Footer */
         footer {
             background-color: #2c3e50;
@@ -113,45 +242,169 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#parties">Parties</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#workshops">Workshops</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#book">Book Now</a></li>
         </ul>
     </nav>
 
     <!-- Header -->
     <header>
-        <h1>🎪 Circus in a Flash</h1>
-        <p>Fun, Entertainment & Workshops</p>
+        <h1>🎪 Circus In A Flash™</h1>
+        <p>We'll make your event awesome!</p>
     </header>
 
     <!-- Main Content -->
     <main>
         <div class="content">
-            <h2>Welcome!</h2>
             <p>
-                This is the new Circus in a Flash website. We're currently rebuilding 
-                to bring you an even better experience. Stay tuned for updates!
+                We bring the circus to you, with circus-style entertainment for all types of parties, events, workshops, promotions and celebrations throughout New Zealand – stilt-walking, crowd interaction, unicycling, juggling, acrobatics and more, with highly skilled performers in incredible costumes.
             </p>
-            <p>
-                Circus in a Flash provides entertainment and workshops for events, 
-                bringing joy and excitement to audiences of all ages.
+            <p class="notice">
+                <em>As of December 2021 we are concentrating our services in Tauranga, the Bay of Plenty and Hamilton. We will no longer be offering kid's parties in other regions but will still be available for events and holiday programmes throughout the North Island. We do not service the South Island unless specific events or where travel fees are paid. We look forward to moving forward to continue providing great quality entertainment in this new Covid landscape!</em>
             </p>
         </div>
 
-        <!-- Placeholder Image (replace with actual circus image) -->
+        <!-- Hero Image -->
         <img 
-            src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?w=800&h=400&fit=crop" 
+            src="pictures/Circus-Showman-1.jpg" 
             alt="Circus Performance" 
             class="hero-image"
         >
 
+        <!-- Team Members Section -->
+        <div class="team-section">
+            <h2>TEAM MEMBERS</h2>
+            <p class="subtitle">A snapshot of our team:</p>
+            
+            <div class="team-carousel">
+                <button class="scroll-btn scroll-btn-left" onclick="scrollTeam(-1)">‹</button>
+                <div class="team-scroll" id="teamScroll">
+                    <div class="team-member">
+                        <img src="pictures/team/Head-shot.png" alt="Rowan Dawson">
+                        <div class="name">Rowan Dawson</div>
+                        <div class="role">Director/ Lead Performer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Nick-Davis-Performer-Teacher-600x900.jpg" alt="Nick Davis">
+                        <div class="name">Nick Davis</div>
+                        <div class="role">Performer/ Teacher</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Ariel-Kanuka-Stiltwalker-Acrobat-350x350.jpg" alt="Ariel Kanuka">
+                        <div class="name">Ariel Kanuka</div>
+                        <div class="role">Stiltwalker/ Acrobat</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Dan-Martin-Balloon-Artist-Puppeteer-600x685.jpg" alt="Dan Martin">
+                        <div class="name">Dan Martin</div>
+                        <div class="role">Balloon Artist/ Puppeteer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Jamil-Hannah-Stilt-Walker-215x300.jpg" alt="Jamil Hannah">
+                        <div class="name">Jamil Hannah</div>
+                        <div class="role">Stilt Walker/ Teacher</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Jason-Butler-Senior-Performer-1-600x752.jpg" alt="Jason Butler">
+                        <div class="name">Jason Butler</div>
+                        <div class="role">Senior Performer/ Teacher</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Martin-Gower-Senior-Performer-204x300.jpg" alt="Martin Gower">
+                        <div class="name">Martin Gower</div>
+                        <div class="role">Senior Performer/ Teacher</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Member-Adrian-Smith-Performer-Dancer-600x900.jpg" alt="Adrian Smith">
+                        <div class="name">Adrian Smith</div>
+                        <div class="role">Performer/ Dancer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Member-Brodie-Kelly-Peformer-Musician-600x692.jpg" alt="Brodie Kelly">
+                        <div class="name">Brodie Kelly</div>
+                        <div class="role">Performer/ Musician</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Member-Evelyn-Coulson-Peformer.jpg" alt="Evelyn Coulson">
+                        <div class="name">Evelyn Coulson</div>
+                        <div class="role">Performer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Member-Harry-Adams-Peformer.jpg" alt="Harry Adams">
+                        <div class="name">Harry Adams</div>
+                        <div class="role">Performer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Member-Lisa-Schady-Performer.jpg" alt="Lisa Schady">
+                        <div class="name">Lisa Schady</div>
+                        <div class="role">Performer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Member-Mary-Gargett-Senior-Peformer.jpg" alt="Mary Gargett">
+                        <div class="name">Mary Gargett</div>
+                        <div class="role">Senior Performer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Member-Tessa-Dawson-Party-Planner-198x300.jpg" alt="Tessa Dawson">
+                        <div class="name">Tessa Dawson</div>
+                        <div class="role">Party Planner</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Michael-Armstrong-Senior-Performer.jpg" alt="Michael Armstrong">
+                        <div class="name">Michael Armstrong</div>
+                        <div class="role">Senior Performer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Nathan-Kerr-Fire..jpg" alt="Nathan Kerr">
+                        <div class="name">Nathan Kerr</div>
+                        <div class="role">Fire Performer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Rebecca-Corinna-Senior-Performer.jpg" alt="Rebecca Corinna">
+                        <div class="name">Rebecca Corinna</div>
+                        <div class="role">Senior Performer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Tony-Jenkins-Performer-Fire-Artist.jpg" alt="Tony Jenkins">
+                        <div class="name">Tony Jenkins</div>
+                        <div class="role">Performer/ Fire Artist</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Tony-Melton-Senior-Unicyclist-Performer-Teacher.jpg" alt="Tony Melton">
+                        <div class="name">Tony Melton</div>
+                        <div class="role">Senior Unicyclist/ Performer/ Teacher</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="pictures/team/Team-Victoria-Brook-Performer-Stiltwalker.jpg" alt="Victoria Brook">
+                        <div class="name">Victoria Brook</div>
+                        <div class="role">Performer/ Stiltwalker</div>
+                    </div>
+                </div>
+                <button class="scroll-btn scroll-btn-right" onclick="scrollTeam(1)">›</button>
+            </div>
+        </div>
+
         <div class="content">
-            <h2>Coming Soon</h2>
-            <p>
-                We're working on bringing you information about our workshops, 
-                performances, and how to book us for your next event.
-            </p>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.5rem;">
+                <img src="pictures/ciaf-logo-round.png" alt="Circus In A Flash Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                <h2 style="margin: 0;">How To Juggle with Circus In A Flash</h2>
+            </div>
+            <div style="max-width: 800px; margin: 2rem auto;">
+                <a href="https://www.youtube.com/watch?v=lziDW8KaPBc" target="_blank" style="display: block; position: relative;">
+                    <img src="https://img.youtube.com/vi/lziDW8KaPBc/maxresdefault.jpg" 
+                         alt="Watch Circus in a Flash Performance" 
+                         style="width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(231, 76, 60, 0.9); color: white; padding: 1rem 2rem; border-radius: 50px; font-size: 1.2rem; font-weight: bold;">
+                        ▶ Watch on YouTube
+                    </div>
+                </a>
+            </div>
         </div>
     </main>
 
@@ -159,5 +412,16 @@
     <footer>
         <p>&copy; 2024 Circus in a Flash. All rights reserved.</p>
     </footer>
+
+    <script>
+        function scrollTeam(direction) {
+            const container = document.getElementById('teamScroll');
+            const scrollAmount = 300;
+            container.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
